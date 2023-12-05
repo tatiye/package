@@ -1,0 +1,29 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJyZWFjdFwvQXBpXC8wLjFcL2FwcGZpbGUucGhwIiwidWlkIjoxfQ",
+        "package": "react\/Api\/0.1",
+        "version": "0.1",
+        "segments": "select",
+        "filename": "appfile",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "join",
+            "tabel": "demo a",
+            "select": "a.id,a.nama,a.title",
+            "where": "a.row='1'",
+            "jaoinTabel": "appfile b",
+            "jaoinSelet": "b.filename",
+            "onJoin": "b.keyid=a.id",
+            "result": "",
+            "segment": "select",
+            "package": "react\/0.1",
+            "filename": "appfile",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

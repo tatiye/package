@@ -1,0 +1,85 @@
+<grid-tatiye 
+  id="tabelClik"
+  element="card"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="Buku Kas" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJidWt1a2FzXC9BcGlcLzAuMVwvYnVrdWthcy5waHAiLCJ1aWQiOjF9",
+              "filename"    :"Jurnal-Kas",
+              "tableHead"   :["No","Tanggal","Keterangan","Sumber","Aktivitas","Periode","Pemasukan","Pengeluaran","Saldo Kas",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Buku Kas Insert Data",
+                      "content"     :"from", 
+                      "segment"     :"bukukas",
+                      "storage"     :[true, "bk","500px","userid"],
+                      "action"      :{
+                                       "aktifitas"  :["select","5","Kas","custom",["Pemasukan","Pengeluaran"]],
+                                       "tanggal"    :["date","7","Tanggal","yy/mm/dd"],
+                                       "saldo"      :["number","5" ,"Saldo"],
+                                       "sumber"     :["text","7" ,"Sumber"],
+                                       "keterangan" :["text","12","Keterangan"]
+                                     }
+              },
+              "stack"     :{
+                            "segment"  :"updateBK",
+                            "action"   :{
+                                       "aktifitas"  :["text","4","Kas","readonly"],
+                                       "tanggal"    :["date","4","Tanggal","yy/mm/dd"],
+                                       "saldo"      :["number","4" ,"Saldo"],
+                                       "keterangan" :["text","12","Keterangan"]
+                            }
+              },
+              "dropdown"  :{
+                      "Update"    :["stack"  ,"5" ,"keterangan","edit-3"],
+                      "Delete"    :["recycle","5" ,"keterangan","trash-2"],
+                      "route"     :["route","5" ,"aktifitas","book","400px","react/lorem"]
+              },
+              "tabelFooter" :false,
+              "selectData"  :false,
+              "sheetData"   :{
+                  "Sheet A":{
+                      "show": [ 1,2,3 ],
+                      "hide": [ 4,5 ]
+                  },
+                  "Sheet B":{
+                     "show": [ 4,5 ],
+                     "hide": [  ]
+                  }  
+               },
+              "selectData"   :{
+                  "action":{
+                        "aktifitas"   :["select","6","Kas","custom",["Pemasukan","Pengeluaran"]],
+                        "tanggal"     :["date","6","Tanggal","yy/mm/dd"]  
+                    },
+                   "roleoption":{
+                          "#customaktifitas1"      :["change","4"],
+                          "#datepickertanggal2"    :["change","1"]
+                    }
+              },
+              "columnHide"  :[4,5],
+              "tabelFooter" :["6","7"],
+              "columnDefs" :[
+                 {"td": 0,"className": ""},
+                 {"td": 1,"className": ""},
+                 {"td": 2,"className": ""},
+                 {"td": 3,"className": ""},
+                 {"td": 4,"className": ""},
+                 {"td": 5,"className": ""},
+                 {"td": 6,"className": "text-right","width": "10%"},
+                 {"td": 7,"className": "text-right","width": "10%"},
+                 {"td": 8,"className": "text-right","width": "10%"},
+                 {"td": 9,"className": "text-right","width": "3%"}
+              ]
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>

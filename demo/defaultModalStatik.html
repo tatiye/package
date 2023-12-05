@@ -1,0 +1,183 @@
+
+<script type="module" src="../package/demo/app.js"></script>
+ <button data-key="entri" id="mysetmodal">Show modal 1</button>
+ <div id="modalBody"></div>
+ <div id="modalBody1"></div>
+ <div id="modalBody"></div>
+<div id="app">
+   <input type="text" placeholder="Enter KeyWords"v-model="keywords" class="form-control" @keyup="storage">
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">#</th>
+      <th scope="col">#</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(row, index) in content">
+      <th scope="row"> {{row.no}}</th>
+      <th> <img style="width:50px" class="card-img-top" :src="row.filename" ></th>
+      <td>{{row.nama}}</td>
+      <td>{{row.title}}</td>
+      <td>
+        <a href="javascript:void(0);"v-on:click="setUpdate(row.id,row.nama,row.userid)">Update </a></td>
+      <td><a href="javascript:void(0);"v-on:click="setDelete(row.id,row.nama,row.userid)">Delete </a></td>
+      <td><a href="javascript:void(0);"v-on:click="setUpload(row.id,row.nama,row.userid)">Upload Img</a></td>
+      <td><a href="javascript:void(0);"v-on:click="setUploadFile(row.id,row.nama,row.userid)">Upload File</a></td>
+      <td><a href="javascript:void(0);"v-on:click="modalRoute(row.id,row.nama,row.userid)">Modal</a></td>
+    </tr>
+ 
+  </tbody>
+</table>
+  
+<nav aria-label="Page navigation example">
+  <ul class="pagination mg-b-0">
+ 
+      <li class="page-item">
+      <a class="page-link page-link-icon" v-on:click="getPaging(Newer)" @click="storage()">
+        <i data-feather="chevron-left"></i>
+      </a>
+    </li>
+  <li  class="page-item"v-for="(row, index) in pagingList" :class="(row.calss)">
+                <a class="page-link" href="javascript:void(0);"v-on:click="getPaging(row.page)" @click="storage()">{{ row.page }}</a>
+              </li>
+    <li class="page-item">
+      <a class="page-link page-link-icon" v-on:click="getPaging(Older)" @click="storage()">
+        <i data-feather="chevron-right"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+<!-- <ul v-for="(row, index) in router">
+  <li> <a :href="index"v-on:click="setRoute()" >{{index}}</a></li>
+</ul>
+       -->
+
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+                <h3>tatiyeNet Modules ES6</h3>
+                <ul>
+                
+                  <li>Images 
+                   <ol>
+                     <li>Original</li>
+                     <li>Resize</li>
+                   </ol>
+                    <ol>
+                     <li>Drive</li>
+                     <li>Images</li>
+                     
+                   </ol>
+                  </li>
+                  <li>fileType</li>
+                  <li>Firebase ?</li>
+                  <li>Tables ?</li>
+                  <li>Qrcode ?</li>
+                  <li>Router</li>
+                  <li>setHttp</li>
+                  <li>setFrom</li>
+                  <li>setModal</li>
+                  <li>substr</li>
+                  <li>readmore</li>
+                  <li>explode</li>
+                  <li>expo</li>
+                  <li>replace</li>
+                  <li>setDecode</li>
+                  <li>setToken</li>
+                  <li>getToken</li>
+                  <li>setDateTime</li>
+                </ul>  
+
+
+  </div>
+  <div class="col-md-6">
+    <h3>CATATAN</h3>
+<ol>
+  <li><h4>Modal</h4>
+    <ul>
+      <li>modalRoute</li>
+    </ul>
+     <b>content</b>
+     <ol>
+<li>profile</li>
+<li>delete</li>
+<li>from</li>
+<li>upload</li>
+<li>content</li>      
+     </ol>
+  </li>
+
+  <li><h4>From</h4>
+     <ol>
+<li>from</li>
+<li>upload</li>
+<li>uploadFile</li>
+<li>userid</li>
+
+     </ol>
+  </li>
+
+  </div>
+</div>
+
+
+
+
+  <li><h4>Route</h4></li>
+  <li><h4>API Castom</h4></li>
+  <li><h4>Data Tables</h4></li>
+  <li><h4>Package</h4></li>
+  <li><h4>Profil</h4></li>
+  <li><h4>Api News</h4></li>
+</ol>
+<div id="blue" data-id="example" class="box">Box 1</div>
+         <div class="1chat-group">
+          
+           <p>{description}</p>
+               <h3>tatiyeNet Modules ES6</h3>
+                <ul>
+                  <li>Router</li>
+                  <li>setHttp</li>
+                  <li>setFrom</li>
+                  <li>setModal</li>
+                  <li>substr</li>
+                  <li>readmore</li>
+                  <li>explode</li>
+                  <li>expo</li>
+                  <li>replace</li>
+                  <li>setDecode</li>
+                  <li>setToken</li>
+                  <li>getToken</li>
+                  <li>setDateTime</li>
+                </ul>
+               <h3>Package</h3>
+           <ol>
+             <li>Profil</li>
+             <li>Hak Akses User</li>
+             <li>Atur jalaur Package user</li>
+             <li>Arsip data</li>
+           </ol>
+           <h3>Helper</h3>
+           <ol>
+             <li>Images</li>
+             <li>datatime</li>
+             <li>Text</li>
+           </ol>
+          </div>
+            {favicon}
+              <ul>
+
+
+

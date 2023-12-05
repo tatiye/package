@@ -1,0 +1,163 @@
+<script type="module">
+
+     import tatiyeNet,{components,setTables,modalRoute,modalRouteFrom} from "{ROOTMODULES}/es6.js";
+       const assets = new components();
+      let row=setTables('eyJkaXIiOiJyYmFjXC9BcGlcLzAuMVwvZGF0YXRhYmxlcy5waHAiLCJ1aWQiOjF9')
+      row.headTabel({
+        'table'       :'rootTabel',
+        'dataTable'   :'example1',
+        'tableHead'   :['No','','Nama','Email','Password','Telpon',''],
+        'fromAction'  :true,
+        'tabelFooter' :false,
+         'myfrom'        :{
+             'nama'       :['text',    '6' ,'Name'],
+             'Limit'      :['select',  '6' ,'No','limit',10],
+        },
+      });
+  window.ClickDropdown=function (main,key) {
+        modalRouteFrom(main,key,'demo','datatables');
+   };
+    var myTable=$('#example1').DataTable({
+        "processing"  :true,
+         "serverSide" :false, // Aktif Jika 5juta Data
+         "dom"        :'B<"clear">lfrtip',
+         "buttons"    :row.extend({
+            'extend'     :true,
+            'refresh'    :false,
+            "filename"   :'dataSet',
+            "sheetData" :{
+                  // "Sheet A":{
+                  //     "show": [ 1, 2 ],
+                  //     "hide": [ 3,4 ]
+                  // },
+                  // "Sheet B":{
+                  //    "show": [3,4],
+                  //    "hide": [ 1, 2 ]
+                  // },  
+            },
+         }),
+        "ajax": {
+            "url":row.storage(),
+            "type": 'GET',
+            "headers": { 
+              'Authorization':row.authorization() 
+            }
+        },
+           "columnDefs" : [
+              { 'visible': false, 'targets': [4] }, //Role
+              // { 'visible': false, 'targets': [5] }, //Role
+              // DISINI SISIP SCRIP TAMBAHAN
+              {
+                "targets": 1,
+                "width": "5%",
+                "className": "text-left",
+                 render: function (data, type, val) {
+                  var desain=`
+                  <div class="avatar avatar-sm avatar-offline">
+                <img src="${data}" class="rounded-circle" alt="">
+                </div>
+              
+                  `;
+                  return desain;
+                 },
+               },
+               {
+                "targets": 2,
+                "className": "text-left",
+                 render: function (data, type, val) {
+                  if (val[9] === 3) {
+                    var akun="| akun diblock";
+                  } else {
+                    var akun="";
+
+                  }
+                  var desain=`
+                  ${data}  ${akun}
+              
+                  `;
+                  return desain;
+                 },
+               },
+              {
+                "targets": 6,
+                "width": "10%",
+                "className": "text-center",
+                "className": "text-right",
+                 render: function (data, type, val) {
+
+
+
+                 // console.log(val[3])
+                 let drop= {
+                          "package"    :'rbac',
+                          "autoload"   :'setdropdown', //active ,default
+                          "from"       :{
+                             "view"       :val[2]+',400px,default,rbac/data',
+                             "pack"       :val[2]+',400px,from,rbac/dataPackage',
+                             "stat"       :val[2]+',400px,from,rbac/dataStatus',
+                             "routeWil"   :val[2]+',400px,from,rbac/dataWilayah',
+                             "akses"      :val[2]+',400px,from,rbac/logAkses',
+                             // "delete"     :val[2]+',400px,delete,eyJkaXIiOiJyYmFjXC9BcGlcLzAuMVwvaW5zZXJ1c2VyLnBocCIsInVpZCI6MX0',
+                             // "insert"     :val[2]+',400px,from,rbac/modal',
+                             // "upload"     :val[2]+',400px,upload,rbac/upload',
+                             // "uploadFile" :val[2]+',400px,upload,rbac/uploadFile',
+                          },
+                          "lengthMenu"        :{
+                               "Detail"       :["view"   ,val[8]  ,"info"],
+                               "Package"      :["pack"   ,val[8]  ,"package"],
+                               "Status"       :["stat"   ,val[8]  ,"server"],
+                               "Route"        :["routeWil"  ,val[8]  ,"globe"],
+                               "Log Access"   :["akses"  ,val[8]  ,"eye-off"],
+                               // "Delete"       :["delete" ,val[8]  ,"trash"],
+                          },
+                    };
+               
+    var myMenu='';
+    var myMenu=`
+<a href="javascript:void(0);" class="dropdown-link" data-toggle="dropdown"><i class="feat feat-more-vertical"></i></a>
+<div class="dropdown-menu">
+    `;
+      $.each(drop.lengthMenu,function(key1, row1){
+         var desain=`
+          <a onclick="ClickDropdown('${drop.from[row1[0]]}','${row1[1]}');" href="javascript:void(0);" class="pt-5px dropdown-item "><i class="icon-feather-${row1[2]} fs-14px"></i> ${key1}</a>
+         `;
+         myMenu +=desain;
+      });
+
+
+
+                    return myMenu+'</div>';
+                 },
+               },
+           ],
+           "language": {
+                 "searchPlaceholder": 'Search...',
+                 "sSearch": '',
+                 "lengthMenu": '_MENU_ ',
+            },
+    });
+    $('.dataTables_length select').select2({minimumResultsForSearch: Infinity });  
+
+    // GET From Action
+            var columnRoleoption ={
+            '#Limit2'      :['change','0'],
+            '#Inputnama1'  :['keyup','2'],
+            };  
+            $.each(columnRoleoption,function(index,row){
+                  $(document).on(row[0], index, function(){
+                    //console.log(this.value);
+                      myTable
+                       .columns(row[1])
+                       .search(this.value)
+                       .draw();
+                   });
+              });
+    // AND GET From Action
+
+
+window.reload=function (key) {
+   $(".table").DataTable().ajax.reload( null, false);
+}
+
+</script>
+<rootTabel id="rootTabel"></rootTabel>

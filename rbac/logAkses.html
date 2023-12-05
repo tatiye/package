@@ -1,0 +1,22 @@
+<script type="module">
+import tatiyeNet,{setFrom} from "{ROOTMODULES}/es6.js";
+    setFrom({
+             storage      :{
+               'label'    :true,
+               'tabel'    :'appuserprofil',
+               'segment'  :'LoginAkses',
+               'az'       :'a',
+               'key'      :'{key}',
+               'model'    :'{resheader}',
+               'route'    :'rbac',
+               'content'  :'from', //Outside,QuickSend 
+               'setdata'  :'public|userid', //public,privacy|user_id 
+             },
+             action      :{
+                 // TYPE INPUT
+                   'loginattempts'     :['select',  '12' ,'Login Akses' ,'custom' ,['On','Off']],
+   
+              },
+
+    });
+</script>

@@ -1,0 +1,29 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJyZWFjdFwvQXBpXC8wLjFcL2Zyb20ucGhwIiwidWlkIjoxfQ",
+        "package": "react\/Api\/0.1",
+        "version": "0.1",
+        "segments": "insert",
+        "filename": "from",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "demo",
+            "select": "nama,title",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "insert",
+            "package": "react\/0.1",
+            "filename": "from",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

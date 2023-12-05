@@ -1,0 +1,37 @@
+
+    <chart-tatiye 
+       token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9wcHQucGhwIiwidWlkIjoxfQ"
+       canvasID="chartBar1"
+       type="Chartfive"
+       element=".row"
+       id="app">
+           <div class="card1 ht-lg-100p">
+              <div class=" card-header d-flex align-items-center justify-content-between">
+                <h6 class="mg-b-0">Progres data</h6>
+                <ul class="list-inline d-flex mg-b-0">
+                  <li class="list-inline-item d-flex align-items-center">
+                    <span class="d-block wd-10 ht-10 bg-df-2 rounded mg-r-5"></span>
+                    <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03">{bulan}</span>
+                  </li>
+                  <li class="list-inline-item d-flex align-items-center mg-l-10">
+                    <span class="d-block wd-10 ht-10 bg-df-3 rounded mg-r-5" ></span>
+                    <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03" >{tahun}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body pd-b-0">
+                <div class="row mg-b-20" id="template">
+                  <div class="col">
+                    <h4 class="tx-normal tx-rubik tx-spacing--1 mg-b-10" name="data">150,200
+                      <span class="tx-11 tx-success letter-spacing--2" name="progress">
+                        <i class="icon ion-md-arrow-up"></i> 0.20%</span>
+                    </h4>
+                    <p class=" tx-11 tx-uppercase tx-spacing-1 tx-medium tx-color-03"name="label">Oktober</p>
+                  </div>
+                </div>        
+                <div class="chart-five">
+                  <div><canvas id="chartBar1"></canvas></div>
+                </div>
+              </div>
+            </div>
+     </chart-tatiye>  

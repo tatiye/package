@@ -1,0 +1,38 @@
+<script type="module">
+ import tatiyeNet,{setModal} from "{ROOTMODULES}/es6.js";
+ import 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js';
+const res = await axios.post(tatiyeNet.api+'/v1/userid/select', {
+    "userid" :tatiyeNet.userid
+ });
+const row=JSON.parse(JSON.stringify(res.data))
+$("#alamat").html(row.alamat);
+$("#telepon").html(row.telepon);
+$("#upadate").html(row.date+' '+row.time);
+$("#upadate1").html(row.date+' '+row.time);
+$("#profIMG").attr("src", row.avatar);
+$("#proName").html(row.nama);
+$("#profEmail").html(row.email);
+
+</script>
+<ul class="activity tx-13">
+  <li class="activity-item">
+    <div class="activity-icon bg-primary-light tx-primary">
+      <i  class="feat feat-map-pin"></i>
+    </div>
+
+    <div class="activity-body">
+      <p class="mg-b-2"><strong>Alamat</strong> <span id="alamat"></span></p>
+      <small class="tx-color-03"id="upadate1"></small>
+    </div><!-- activity-body -->
+  </li><!-- activity-item -->
+                      <li class="activity-item">
+                        <div class="activity-icon bg-pink-light tx-pink">
+                          <i class="feat feat-smartphone"></i>
+                        </div>
+                        <div class="activity-body">
+                          <p class="mg-b-2"><strong>Telepon</strong> <span id="telepon"></span></p>
+                          <small class="tx-color-03"id="upadate"></small>
+                        </div><!-- activity-body -->
+                      </li><!-- activity-item -->
+</ul><!-- activity -->
+<br>

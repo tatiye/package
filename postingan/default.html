@@ -1,0 +1,90 @@
+<script type="module">
+    import tatiyeNet,{getHistory} from "{tatiye.es6}"; 
+     getHistory({
+      "segment":'package',
+      "content":'tabline',
+      "atribut":'body-Postinganpost0'
+     })
+</script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+<grid-tatiye 
+  id="post"
+  element="card"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="Postingan" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJwb3N0aW5nYW5cL0FwaVwvMC4xXC9wb3N0aW5nYW4ucGhwIiwidWlkIjoxfQ",
+              "filename"    :"ListItem",
+              "headermenu"  :["sortable","title"],
+              "tabline"     :{
+                   "active"     :"Postingan", 
+                   "route"       :{
+                     "Postingan"      :"pec/postingan#index",
+                     "Api News"       :"pec/postingan#apiNews",
+                     "Crawler"        :"pec/postingan#crawler"
+                  }
+              },
+              "tableHead"   :["No","","Post",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Postingan Baru",
+                      "content"     :"from", 
+                      "segment"     :"InsertIpost",
+                      "storage"     :[true, "post","55%","userid","title"],
+                      "action"      :{
+                                       "title"       :["text",    "7" ,"Item"],
+                                       "categori"    :["select",  "3" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-postingan"],
+                                       "pubDate"     :["date",    "2" ,"Tanggal","yy/mm/dd"],
+                                       "detail"      :["textarea",  "12" ,"Detail"]
+                                     }
+              },
+              "useDevices"  :{
+                      "Detail"            :["dialog"      ,"3" ,"title" ,"book","550px"],
+                      "Update"            :["from"        ,"3" ,"title" ,"edit-3"],
+                      "Images"            :["upload"      ,"3" ,"title" ,"image"],
+                      "Index Images"      :["indexImages" ,"3" ,"title" ,"image" ],
+                      "Delete"            :["recycle"     ,"3" ,"title" ,"trash-2"]
+              },
+              "tabelFooter" :false,
+              "primaryKey"  :"{key}", 
+              "selectData"   :{
+                  "action":{
+                          "title"     :["text",    "8" ,"Item"],
+                          "categori"  :["select",  "2" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-postingan"],
+                          "date"      :["date",    "2" ,"Tanggal","yy/mm/dd"]  
+                    },
+                   "roleoption":{
+                          "#Inputtitle1"     :["keyup" ,"2"],
+                          "#Tabelcategori2"  :["change","2"],
+                          "#datepickerdate3" :["change","2"]
+                    }
+              },
+              "sheetData"   :false,
+              "columnDefs" :[
+                 {"td": 0,"className": ""},
+                 {"td": 1,"className": "","width": "7%"},
+                 {"td": 2,"className": "","width": "85%"},
+                 {"id": 3,"className": "","width": "3%"}
+              ]
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>
+      
+    </div>
+  </div>
+</div>
+
+ 

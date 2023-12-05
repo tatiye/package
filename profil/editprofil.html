@@ -1,0 +1,40 @@
+{resheader}
+<script type="module">
+
+import tatiyeNet,{setFrom} from "{ROOTMODULES}/es6.js";
+const indexOn = {
+  render() {
+    setFrom({
+             storage      :{
+               'label'    :true,
+               'tabel'    :'appuserprofil',
+               'segment'  :'editprofil',
+               'az'       :'akun',
+               'key'      :tatiyeNet.uid,
+               'model'    :'{resheader}',
+               'route'    :'profil',
+               'content'  :'dialog', //Outside,QuickSend 
+             },
+             action      :{
+                 // TYPE INPUT
+                 'nama'       :['text',     '12' ,'Nama Lengkap'],
+                 'email'      :['email',    '6'  ,'Email'],
+                 'password'   :['password', '6'  ,'Password'],
+                 'telepon'    :['Hp',       '4' ,'No Telepon'],
+                 'alamat'     :['text',     '8' ,'Alamat'],
+              },
+
+    });
+    const index = document.getElementById('row');
+    index.innerHTML = `
+        <div>
+          <div id="nugi"></div>
+          <div id="form-body"></div>
+        </div>
+      `;
+    return index;
+  }
+};
+indexOn.render();
+</script>
+<div id="row"></div>

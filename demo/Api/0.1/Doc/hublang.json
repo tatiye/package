@@ -1,0 +1,29 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJkZW1vXC9BcGlcLzAuMVwvaHVibGFuZy5waHAiLCJ1aWQiOjF9",
+        "package": "demo\/Api\/0.1",
+        "version": "0.1",
+        "segments": "datatables",
+        "filename": "hublang",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "hublang",
+            "select": "nama,nsb,alamat",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "datatables",
+            "package": "demo\/0.1",
+            "filename": "hublang",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

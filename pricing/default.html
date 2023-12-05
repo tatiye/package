@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+<grid-tatiye 
+  id="pricing"
+  element="card"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="Pricing" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJwcmljaW5nXC9BcGlcLzAuMVwvcHJpY2luZy5waHAiLCJ1aWQiOjF9",
+              "filename"    :"ListPricing",
+              "tableHead"   :["No","","Kategori","Deskripsi","Items","Harga",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Datatables Insert Data",
+                      "content"     :"from", 
+                      "segment"     :"Insertprice",
+                      "storage"     :[true, "ab","500px","userid","nama"],
+                      "action"      :{
+                                       "title"      :["select",  "4" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-pricing"],
+                                       "nama"       :["text",    "4" ,"Nama"],
+                                       "harga"      :["number",  "4" ,"Harga"],
+                                       "deskripsi"  :["text",    "12" ,"Deskripsi"]
+                                     }
+              },
+              "useDevices"  :{
+                      "Buat Items"        :["package" ,"6","nama" ,"plus","400px","item/default"],
+                      "Update"            :["from"   ,"6" ,"nama" ,"edit-3"],
+                      "Upload"            :["upload" ,"6" ,"nama" ,"image","400px"],
+                      "Detail"            :["dialog" ,"6" ,"nama" ,"book","400px"],
+                      "Delete"            :["recycle","6" ,"nama" ,"trash-2"]
+              },
+              "tabelFooter" :false,
+              "selectData"  :false,
+              "sheetData"   :false,
+              "selectData"   :{
+                  "action":{
+                         "deskripsi"   :["text",     "6" ,"Deskripsi"],
+                         "title"       :["select",  "6" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-pricing"]  
+                    },
+                   "roleoption":{
+                          "#Inputdeskripsi1"  :["keyup","3"],
+                          "#Tabeltitle2"      :["change","2"]
+                    }
+              },
+              "columnDefs" :[
+                 {"td": 0,"className": ""},
+                 {"td": 1,"className": "","width": "5%"},
+                 {"td": 2,"className": ""},
+                 {"td": 3,"className": "","width": "25%"},
+                 {"td": 4,"className": "","width": "30%"},
+                 {"td": 5,"className": "text-right bold"},
+                 {"id": 6,"className": "","width": "5%"}
+              ]
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>
+
+
+ 
+    </div>
+  </div>
+</div>

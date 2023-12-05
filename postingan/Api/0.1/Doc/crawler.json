@@ -1,0 +1,31 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJwb3N0aW5nYW5cL0FwaVwvMC4xXC9hcGlOZXdzLnBocCIsInVpZCI6MX0",
+        "package": "postingan\/Api\/0.1",
+        "controllers": "postingan",
+        "tabel": "appnews",
+        "version": "0.1",
+        "segments": "datatables",
+        "filename": "postingan",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "appnews",
+            "select": "segment,web,favicons,thumbnail,link,title,description,pubDate,categori,id,userid",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "datatables",
+            "package": "postingan\/0.1",
+            "filename": "postingan",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

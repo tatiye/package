@@ -1,0 +1,121 @@
+        <div class="row">
+          <div class="col-md-4 mg-t-10">
+            <div class="card1">
+              <div class="card-body pd-y-20 pd-x-25">
+                <div class="row row-sm">
+                  <div class="col-7">
+                    <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">3,605</h3>
+                    <h6 class="tx-12 tx-semibold tx-uppercase tx-spacing-1 tx-primary mg-b-5">Click Through</h6>
+                    <p class="tx-11 tx-color-03 mg-b-0">No. of clicks to ad that consist of a single impression.</p>
+                  </div>
+                  <div class="col-5">
+                    <div class="chart-ten">
+                      <div id="flotChartTwo63" class="flot-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-md-4 mg-t-10">
+            <div class="card1">
+              <div class="card-body pd-y-20 pd-x-25">
+                <div class="row row-sm">
+                  <div class="col-7">
+                    <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">3,266</h3>
+                    <h6 class="tx-12 tx-semibold tx-uppercase tx-spacing-1 tx-teal mg-b-5">View Through</h6>
+                    <p class="tx-11 tx-color-03 mg-b-0">Estimated daily unique views per visitor on the ads.</p>
+                  </div>
+                  <div class="col-5">
+                    <div class="chart-ten">
+                      <div id="flotChartTwo64" class="flot-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-md-4 mg-t-10">
+            <div class="card1">
+              <div class="card-body pd-y-20 pd-x-25">
+                <div class="row row-sm">
+                  <div class="col-7">
+                    <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">8,765</h3>
+                    <h6 class="tx-12 tx-semibold tx-uppercase tx-spacing-1 tx-pink mg-b-5">Total Conversions</h6>
+                    <p class="tx-11 tx-color-03 mg-b-0">Estimated total conversions on ads per impressions to ads.</p>
+                  </div>
+                  <div class="col-5">
+                    <div class="chart-ten">
+                      <div id="flotChartTwo65" class="flot-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div>
+        </div>
+   
+    <script>
+      $(function(){
+        'use strict'
+
+        var df3data1 = [[0,12],[1,10],[2,7],[3,11],[4,15],[5,20],[6,22],[7,19],[8,18],[9,20],[10,17],[11,19],[12,18],[13,14],[14,9]];
+        var df3data2 = [[0,0],[1,0],[2,0],[3,2],[4,5],[5,2],[6,12],[7,15],[8,10],[9,8],[10,10],[11,7],[12,2],[13,4],[14,0]];
+        var df3data3 = [[0,2],[1,1],[2,2],[3,4],[4,2],[5,1],[6,0],[7,0],[8,5],[9,2],[10,8],[11,6],[12,9],[13,2],[14,0]];
+        var df3data4 = [[0,0],[1,5],[2,2],[3,0],[4,2],[5,7],[6,10],[7,12],[8,8],[9,6],[10,4],[11,2],[12,0],[13,0],[14,0]];
+
+        var flotChartOption1 = {
+          series: {
+            shadowSize: 0,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              barWidth: .5,
+              fill: 1
+            }
+          },
+          grid: {
+            aboveData: true,
+            color: '#e5e9f2',
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 25
+          },
+    			xaxis: {
+            show: false
+          }
+    		};
+
+        $.plot('#flotChartTwo63', [{
+          data: df3data1,
+          color: '#e5e9f2'
+        },{
+          data: df3data2,
+          color: '#66a4fb'
+        }], flotChartOption1);
+
+
+        $.plot('#flotChartTwo64', [{
+          data: df3data1,
+          color: '#e5e9f2'
+        },{
+          data: df3data3,
+          color: '#7ee5e5'
+        }], flotChartOption1);
+
+        $.plot('#flotChartTwo65', [{
+          data: df3data1,
+          color: '#e5e9f2'
+        },{
+          data: df3data4,
+          color: '#f77eb9'
+        }], flotChartOption1);
+
+      })
+    </script>
+  </body>
+</html>

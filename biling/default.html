@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <grid-tatiye 
+        id="ordered"
+        element="card"
+        sortable="false"
+        selector="#gridSystem div"
+        class="container-fluid">
+         <div class="row row-xs"id="gridSystem">
+          <div titel="Order List" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+               stack="datatables"from='{
+                    "token"       :"eyJkaXIiOiJiaWxpbmdcL0FwaVwvMC4xXC9kYWZ0YXJPcmRlci5waHAiLCJ1aWQiOjF9",
+                    "filename"    :"ListOrder",
+                    "tableHead"   :["No","","Nama","Deskripsi","Jlh","Harga","Total","Status",""],
+                    "content"     :"from", 
+                    "fromAction"  :{
+                            "title"       :"Datatables Insert Data",
+                            "content"     :"from", 
+                            "segment"     :"statuspay",
+                            "storage"     :[true, "ab","600px","public","nama"],
+                            "action"      :{
+                                             "status"     :["select", "4" ,"Status" ,"custom" ,["Paid","Unpaid"]],
+                                             "nama"       :["text",    "4" ,"Nama","readonly"],
+                                             "harga"      :["number",  "4" ,"Harga","readonly"],
+                                             "deskripsi"  :["text",    "12" ,"Deskripsi"]
+                                           }
+                    },
+                    "useDevices"  :{
+                        "Update" :["from"   ,"7" ,"nama" ,"edit-3"],
+                        "Detail" :["dialog" ,"7" ,"nama" ,"book","400px"],
+                        "Delete" :["recycle","7" ,"nama" ,"trash-2"]
+                    },
+                    "tabelFooter" :false,
+                    "selectData"  :false,
+                    "sheetData"   :false,
+                    "selectData"   :{
+                        "action":{
+                               "deskripsi"   :["text",     "6" ,"Deskripsi"],
+                               "categori"    :["select",  "6" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-pricing"]  
+                          },
+                         "roleoption":{
+                                "#Inputdeskripsi1"  :["keyup","3"],
+                                "#Tabelcategori2"      :["change","3"]
+                          }
+                    },
+                    "columnDefs" :[
+                       {"td": 0,"className":""},
+                       {"td": 1,"className":"","width": "5%"},
+                       {"td": 2,"className":""},
+                       {"td": 3,"className":"","width": "25%"},
+                       {"td": 4,"className":"","width": "5%"},
+                       {"td": 5,"className":"text-right","width": "10%"},
+                       {"td": 6,"className":"text-right bold"},
+                       {"id": 7,"className":"","width": "5%"},
+                       {"id": 8,"className":"","width": "5%"}
+                    ]
+                 }'>
+               <datatables>
+                 <template id="fromIndex">
+                      <table></table>
+                 </template>
+               </datatables>
+             </div> 
+         </div>
+      </grid-tatiye>
+    </div>
+  </div>
+</div>

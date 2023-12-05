@@ -1,0 +1,115 @@
+<?php
+use app\tatiye;
+
+?>
+
+
+<script type="module">
+
+ import tatiyeNet,{useHandel,components,modalRouteFrom} from "{ROOTMODULES}/es6.js";
+ import 'https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.min.js';
+   const app = document.getElementById('app');
+   const assets = new components();
+   let logEntries=[];
+   storage();
+
+   function storage(keywords='',page=1) {
+        /*
+        |--------------------------------------------------------------------------
+        | Initializes function storage 
+        |--------------------------------------------------------------------------
+        | Develover Tatiye.Net 2023
+        | @Date 9/18/2023 7:42:14 PM
+        */
+		 let listpaket=useHandel({
+		     "token"          :'eyJkaXIiOiJyYmFjXC9BcGlcLzAuMVwvbGlzdFBhY2thZ2UucGhwIiwidWlkIjoxfQ',
+		      "storage"       :{
+		      	"userid":'{key}',
+		          "limit":50,
+		          "page":page,
+		          "keywords":keywords
+		       }
+		});
+         logEntries.push(listpaket);
+      
+
+	     var output = '';
+         listpaket.storage.forEach(row => {
+       	       output += `
+                <li class="list-group-item d-flex pd-sm-x-20">
+						<div class="avatar"><span class="avatar-initial rounded-circle bg-gray-600">s</span></div>
+						<div class="pd-l-10">
+							<p class="tx-medium mg-b-0">${row.namaBase}</p>
+							<small class="tx-12 tx-color-03 mg-b-0">Package</small>
+						</div>
+						<div class="mg-l-auto d-flex align-self-center">
+							<nav class="nav nav-icon-only">
+								<a onclick="Click('${row.id}','${row.namaBase}');"href="javascript:void(0);" class="pt-5px dropdown-item delete"><i class="icon-feather-trash fs-14px"></i></a>
+							</nav>
+						</div>
+					 
+					</li>
+                `;
+         });
+        app.innerHTML =output;  
+
+
+window.Click=function (key,header) {
+console.log(key)
+ modalRouteFrom(header+',400px,delete,eyJkaXIiOiJyYmFjXC9BcGlcLzAuMVwvaW5zZXJ0cmJhYy5waHAiLCJ1aWQiOjF9',key,'appuserpackage')
+
+};
+
+         
+        
+}  
+
+let userProfil=useHandel({
+     "token"          :'eyJkaXIiOiJyYmFjXC9BcGlcLzAuMVwvdXNlclByb2ZpbC5waHAiLCJ1aWQiOjF9',
+      "storage"       :{
+      		"userid":'{key}',
+            "limit":1,
+            "page":1,
+            "keywords":''
+         }
+})
+//JQUERY
+let output = '';
+userProfil.storage.forEach(row => {
+output += `
+			<div class="row">
+			  <div class="col-md-3">
+				 <div class="avatar avatar-sm ">
+	                <img src="${row.avatar}" class="rounded-circle" alt="">
+	            </div>
+			  </div>
+			  <div class="col-md-9">
+			  	<p class="tx-medium mg-b-0">${row.email}</p>
+				<small class="tx-12 tx-color-03 mg-b-0">${row.password}</small>
+			  </div>
+			</div>
+			
+			
+        `;
+});
+$("#user").html(output);
+
+
+</script>
+
+<div class="col-md-12">
+	<div class="card1 ht-100p">
+		<div class="card-header d-flex align-items-center justify-content-between"  id="user">
+		</div>
+		<div >
+
+			<ul class="list-group list-group-flush tx-13" id="app">
+
+			</ul>
+		</div>
+	</div><!-- card -->
+</div>
+
+
+
+

@@ -1,0 +1,62 @@
+<grid-tatiye 
+  id="postApi"
+  element="default"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="PostinganApi" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJwb3N0aW5nYW5cL0FwaVwvMC4xXC9jcmF3bGVyLnBocCIsInVpZCI6MX0",
+              "filename"    :"ListItem",
+              "headermenu"  :["sortable","title"],
+              "tableHead"   :["No","","Post",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Postingan Baru",
+                      "content"     :"from", 
+                      "segment"     :"InsertIpost",
+                      "storage"     :[true, "post","55%","userid","title"],
+                      "action"      :{
+                                       "title"       :["text",    "7" ,"Item"],
+                                       "categori"    :["select",  "3" ,"Kategori" ,"tabel" ,"appindikator" ,"name","name","tabel-postingan"],
+                                       "pubDate"     :["date",    "2" ,"Tanggal","yy/mm/dd"],
+                                       "detail"      :["textarea", "12" ,"Detail"]
+                                     }
+              },
+              "useDevices"  :{
+                      "Add News"          :["apiNews"     ,"3" ,"title" ,"box","400px"],
+                      "Detail"            :["dialog"      ,"3" ,"title" ,"book","550px"],
+                      "Delete"            :["delete"      ,"3" ,"title" ,"trash-2"]
+              },
+              "tabelFooter" :false,
+              "primaryKey"  :"{key}", 
+              "selectData"   :{
+                  "action":{
+                          "title"     :["text",    "8" ,"Item"],
+                          "date"      :["date",    "3" ,"Tanggal","yy/mm/dd"],  
+                          "categori"  :["button",  "1" ,"Add","crawler"]
+                    },
+                   "roleoption":{
+                          "#Inputtitle1"     :["keyup" ,"2"],
+                          "#datepickerdate2" :["change","2"]
+                    }
+              },
+              "sheetData"   :false,
+              "columnDefs" :[
+                 {"td": 0,"className": ""},
+                 {"td": 1,"className": "","width": "7%"},
+                 {"td": 2,"className": "","width": "85%"},
+                 {"id": 3,"className": "","width": "3%"}
+              ]
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>
+
+ 

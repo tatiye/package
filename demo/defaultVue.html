@@ -1,0 +1,102 @@
+
+<script type="module" src="./package/index.js"></script>
+ <button data-key="entri" id="mysetmodal">Show modal 1</button>
+ <div id="modalBody"></div>
+<div id="app">
+   <input type="text" placeholder="Enter KeyWords"v-model="keywords" class="form-control" @keyup="storage">
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Job Title</th>
+      <th scope="col">Degree</th>
+      <th scope="col">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(row, index) in content">
+      <th scope="row"> {{row.no}}</th>
+      <td>{{row.nama}}</td>
+      <td>{{row.title}}</td>
+    
+      <td>Computer Science</td>
+      <td>$120,000</td>
+    </tr>
+   
+  </tbody>
+</table>
+  
+<nav aria-label="Page navigation example">
+  <ul class="pagination mg-b-0">
+ 
+      <li class="page-item">
+      <a class="page-link page-link-icon" v-on:click="getPaging(Newer)" @click="storage()">
+        <i data-feather="chevron-left"></i>
+      </a>
+    </li>
+  <li  class="page-item"v-for="(row, index) in pagingList" :class="(row.calss)">
+                <a class="page-link" href="javascript:void(0);"v-on:click="getPaging(row.page)" @click="storage()">{{ row.page }}</a>
+              </li>
+    <li class="page-item">
+      <a class="page-link page-link-icon" v-on:click="getPaging(Older)" @click="storage()">
+        <i data-feather="chevron-right"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+       
+
+      
+
+</div>
+
+<h3>PHP OBKECK</h3>
+<ol>
+  <li><h4>Select</h4></li>
+  <li><h4>Select</h4></li>
+</ol>
+<div id="blue" data-id="example" class="box">Box 1</div>
+         <div class="1chat-group">
+          
+           <p>{description}</p>
+               <h3>tatiyeNet Modules ES6</h3>
+                <ul>
+                  <li>setHttp</li>
+                  <li>setFrom</li>
+                  <li>setModal</li>
+                  <li>substr</li>
+                  <li>readmore</li>
+                  <li>explode</li>
+                  <li>expo</li>
+                  <li>replace</li>
+                  <li>setDecode</li>
+                  <li>setToken</li>
+                  <li>getToken</li>
+                  <li>setDateTime</li>
+                </ul>
+               <h3>Package</h3>
+           <ol>
+             <li>Profil</li>
+             <li>Hak Akses User</li>
+             <li>Atur jalaur Package user</li>
+             <li>Arsip data</li>
+           </ol>
+           <h3>Helper</h3>
+           <ol>
+             <li>Images</li>
+             <li>datatime</li>
+             <li>Text</li>
+           </ol>
+          </div>
+            {favicon}
+              <ul>
+
+
+    <!-- App home -->
+      <li>{home.TITEL}</li>
+     <!-- END_App home -->
+    </ul>  
+
+

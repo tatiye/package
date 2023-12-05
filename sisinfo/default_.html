@@ -1,0 +1,31 @@
+ <div  class="df-example mb-30px">
+<a href="javascript:void(0);"onclick="useClick(['from','add']);" class="btn btn-xs btn-primary">Insert</a>
+<app-tatiye 
+   token="eyJkaXIiOiJzaXNpbmZvXC9BcGlcLzAuMVwvb2ZmaWNlLnBocCIsInVpZCI6MX0"
+   indexOn="li"
+   stack="group"
+   console="false"
+   id="app"
+   from='{
+           "title"       :"From Insert Data",
+           "content"     :"from", 
+           "segment"     :"laporan",
+           "storage"     :[true, "b","550px","public"],
+           "action"      :{
+                            "nama"       :["text",    "12" ,"Judul"],
+                            "deskripsi"       :["select",    "12" ,"Laporan" ,"tabel" ,"format" ,"deskripsi","deskripsi","row-1"]
+                          }
+    }'>
+   <li key="2"keywords="off" page="1" element="modal"class="list-group-item">
+        <h5 name="nama">Nama </h5>
+        <div>
+           <span name="nmfile" >Format</span> 
+          <span name="date"> Date </span>
+          <a onclick="useClick(['recycle',this.id,'nama']);"class="pl-10px pull-right">Delete </a>
+           <a onclick="useClick(['document',this.id,'nama']);"class="pl-10px pull-right">Document</a>
+           <a onclick="useClick(['from',this.id,'nama']);"class="pl-10px pull-right">Update</a>
+        </div>
+      </li>
+</app-tatiye>
+<stack-group class="list-group"></stack-group>
+</div>icon-feather-inbox

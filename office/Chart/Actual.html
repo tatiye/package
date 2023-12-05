@@ -1,0 +1,58 @@
+        <chart-tatiye 
+                     token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9wcHQucGhwIiwidWlkIjoxfQ"
+                     canvasID="flotChart"
+                     type="Actual"
+                     element=".row"
+                     id="app">
+     
+            <div class="card1">
+              <div class="
+                  card-header
+                  pd-y-20
+                  d-md-flex
+                  align-items-center
+                  justify-content-between">
+                <h6 class="mg-b-0">Actual</h6>
+                <ul class="list-inline d-flex mg-t-20 mg-sm-t-10 mg-md-t-0 mg-b-0">
+                  <li class="list-inline-item d-flex align-items-center">
+                   <span class="d-block wd-10 ht-10 bg-df-1 rounded mg-r-5" ></span>
+                    <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03" >{hari}</span>
+                  </li>
+                  <li class="list-inline-item d-flex align-items-center mg-l-5">
+                    <span class="d-block wd-10 ht-10 bg-df-2 rounded mg-r-5" ></span>
+                    <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03" >{bulan}</span>
+                  </li>
+                  <li class="list-inline-item d-flex align-items-center mg-l-5">
+                    <span class="d-block wd-10 ht-10 bg-df-3 rounded mg-r-5"></span>
+                    <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03" >{tahun}</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- card-header -->
+              <div class="card-body pos-relative pd-0">
+                 <div class="pos-absolute t-20 l-20 wd-xl-100p z-index-10">
+                  <div class="row" id="template">
+                    <div class="col-sm-4">
+                      <h3 class="tx-normal tx-rubik tx-spacing--2 mg-b-5">
+                        <span name="data"></span> 
+                        <small class="tx-color-04 fs-12px tx-medium tx-primary" name="progress2">aaa</small>
+                      </h3>
+                      <h6 class="
+                          tx-uppercase
+                          tx-11
+                          tx-spacing-1
+                          tx-color-02
+                          tx-semibold
+                          mg-b-10
+                        "name="label">
+                      </h6>
+                      <p class="mg-b-0 tx-12 tx-color-03" name="description"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-one">
+                  <div id="flotChart" class="flot-chart"></div>
+                </div>
+              </div>
+            </div>
+         </chart-tatiye>

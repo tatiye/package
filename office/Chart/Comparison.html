@@ -1,0 +1,84 @@
+
+              <div class="card-body pd-sm-20 pd-lg-25">
+                <div class="row row-sm">
+                  <div class="col-sm-5 col-md-12 col-lg-6 col-xl-5">
+                    <div class="media">
+                      <div class="wd-40 ht-40 rounded bd bd-2 bd-primary d-flex flex-shrink-0 align-items-center justify-content-center op-6">
+                        <i data-feather="bar-chart-2" class="wd-20 ht-20 tx-primary stroke-wd-3"></i>
+                      </div>
+                      <div class="media-body mg-l-10">
+                        <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">33.50%</h4>
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Bounce Rate</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                  </div><!-- col -->
+                  <div class="col-sm-5 col-md-12 col-lg-6 col-xl-5 mg-t-20 mg-sm-t-0 mg-md-t-20 mg-lg-t-0">
+                    <div class="media">
+                      <div class="wd-40 ht-40 rounded bd bd-2 bd-gray-500 d-flex flex-shrink-0 align-items-center justify-content-center op-6">
+                        <i data-feather="bar-chart-2" class="wd-20 ht-20 tx-gray-500 stroke-wd-3"></i>
+                      </div>
+                      <div class="media-body mg-l-10">
+                        <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">9,065</h4>
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Page Sessions</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                  </div><!-- col -->
+                </div><!-- row -->
+
+                <div class="chart-eight">
+                  <div id="flotChartTwo31" class="flot-chart"></div>
+                </div>
+              </div><!-- card-body -->
+
+    <script>
+      $(function(){
+        'use strict'
+
+       
+
+
+      
+
+        $.plot('#flotChartTwo31', [{
+            data: df1,
+            color: '#c0ccda',
+            lines: {
+              fill: true,
+              fillColor: '#f5f6fa'
+            }
+          },{
+              data: df3,
+              color: '#0168fa',
+              lines: {
+                fill: true,
+                fillColor: '#d1e6fa'
+              }
+            }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 1.5
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            max: 65
+          },
+    			xaxis: {
+            show: false,
+            min: 40,
+            max: 100
+          }
+    		});
+
+
+      
+
+      })
+    </script>
+

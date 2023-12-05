@@ -1,0 +1,55 @@
+
+          <chart-tatiye 
+                     token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9wcHQucGhwIiwidWlkIjoxfQ"
+                     canvasID="flotChartEdit42"
+                     type="twelve"
+                     import="dashforge/data.jsx"
+                     element=".row"
+                     id="app">
+
+            <div class="card1">
+              <div class="card-header">
+                <h6 class="mg-b-0">Cryptocurrency Watchlist</h6>
+              </div><!-- card-header -->
+              <div class="card-body pd-0">
+
+              
+                <div class="row no-gutters" id="template">
+                  <div class="col col-sm-6 col-lg">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                        <div name="bg_color" addclass="crypto-icon" class="crypto-icon bg-secondary">
+                          <i icon="no" 
+                             boxIcon='{"icon":[
+                                "icon-feather-box",
+                                "icon-feather-check-square",
+                                "icon-feather-database"
+                            ]}' class="cf cf-eth"></i>
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5" name="label"></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0" name="data"></h5>
+                            <p class="mg-b-0 tx-11 tx-danger mg-l-3" name="progress"><i class="icon ion-md-arrow-down"></i></p>
+                          </div>
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+                      <div class="chart-twelve">
+                        <div push="no" id="flotChartEdit42" class="flot-chart"></div>
+                      </div><!-- chart-twelve -->
+
+                      <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">12</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">81</a> ETH Markets
+                        </label>
+                      </div>
+                    </div><!-- crypto -->
+                  </div>
+                  
+                </div><!-- row -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+      </chart-tatiye>  

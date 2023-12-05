@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+<grid-tatiye 
+  id="item"
+  element="card"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="{resheader}" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJpdGVtXC9BcGlcLzAuMVwvaXRlbXByaWNlLnBocCIsInVpZCI6MX0",
+              "filename"    :"ListItem",
+              "tableHead"   :["No","Kategori","Item",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Datatables Insert Data",
+                      "content"     :"from", 
+                      "segment"     :"InsertItem",
+                      "storage"     :[true, "ab","400px","userid","nama"],
+                      "action"      :{
+                                       "nama"       :["text",    "12" ,"Item"],
+                                       "title"      :["hidden",  "12" ,"{resheader}"],
+                                       "idprice"    :["hidden",  "12" ,"{key}"]
+                                     }
+              },
+              "useDevices"  :{
+                      "Update"            :["from"   ,"3" ,"nama" ,"edit-3"],
+                      "Detail"            :["dialog" ,"3" ,"nama" ,"book","400px"],
+                      "Delete"            :["recycle","3" ,"nama" ,"trash-2"]
+              },
+              "tabelFooter" :false,
+              "primaryKey"  :"{key}", 
+              "selectData"  :false,
+              "sheetData"   :false,
+              "columnDefs" :[
+                 {"td": 0,"className": ""},
+                 {"td": 1,"className": ""},
+                 {"td": 2,"className": ""},
+                 {"id": 3,"className": "","width": "5%"}
+              ]
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>
+      
+    </div>
+  </div>
+</div>
+
+ 

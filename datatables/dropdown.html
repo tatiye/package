@@ -1,0 +1,158 @@
+<script type="module">
+        import tatiyeNet,{components,setTables,modalRoute,modalRouteFrom} from "{ROOTMODULES}/es6.js";
+        const assets = new components();
+        const app = document.querySelector('app-tatiye');
+        window.useOnclick=function (property) {
+               // Multi From
+        
+               if (property[3]=='tabel') {
+                   app.fromAction({
+                       'Kabupaten'       :['text',    '6' ,'Kabupaten'],
+                       'Provinsi'        :['date',    '6' ,'Provinsi','yy/mm/dd'],
+                   },property,{
+                        "width":"400px",
+                        "route":"datatables",
+                        "segment":"demoModal02",
+                        "az":"b",
+                        "tabel":"BC4dOfCdK2+ITQa1spUwag"
+                       });
+
+               } else {
+                  app.fromAction({
+                      'nama'       :['text',    '6' ,'Judul'],
+                      'title'      :['date',    '6' ,'Calender','yy/mm/dd'],
+                  },property,false);  
+
+                  app.element({
+                    "id":"data",
+                    "key":"id",
+                    "element":"app-element",
+                    "property":property,
+                  })
+               }
+
+        };
+
+
+
+      let row=setTables('eyJkaXIiOiJkYXRhdGFibGVzXC9BcGlcLzAuMVwvZGF0YXRhYmxlcy5waHAiLCJ1aWQiOjF9')
+      row.headTabel({
+        'table'       :'rootTabel',
+        'dataTable'   :'storage',
+        'tableHead'   :['No','A1','A2','A3','A4',''],
+        'fromAction'  :true,
+        'tabelFooter' :false,
+         'myfrom'        :{
+             'nama'       :['text',    '6' ,'Name'],
+             'Limit'      :['select',  '6' ,'No','limit',10],
+        },
+      });
+
+
+    var myTable=$('#storage').DataTable({
+        "processing"  :true,
+         "serverSide" :false, // Aktif Jika 5juta Data
+         "dom"        :'B<"clear">lfrtip',
+          "pagingType": 'full_numbers',
+         "buttons"    :row.extend({
+            'extend'     :true,
+            'refresh'    :false,
+            "filename"   :'dataSet',
+            "sheetData" :{
+                  "Sheet A":{
+                      "show": [ 1, 2 ],
+                      "hide": [ 3,4 ]
+                  },
+                  "Sheet B":{
+                     "show": [3,4],
+                     "hide": [ 1, 2 ]
+                  },  
+            },
+         }),
+        "ajax": {
+            "url":row.storage(),
+            "type": 'GET',
+            "headers": { 
+              'Authorization':row.authorization() ,
+              
+            }
+        },
+           "columnDefs" : [
+              { 'visible': false, 'targets': [3] }, //Role
+              { 'visible': false, 'targets': [4] }, //Role
+              // DISINI SISIP SCRIP TAMBAHAN
+              {
+                "targets": 5,
+                "width": "10%",
+                "className": "text-center",
+                "className": "text-right",
+                 render: function (data, type, rowData) {
+                    var lengthMenu=row.fromDropdown({
+                    "id":rowData[3],
+                    "dropdown"  :{
+                         "Detail"          :["detail",    'nama'  ,"info"     ,'' ],
+                         "Route"           :["route",     'nama'  ,"corner-up-right" ,'demo/lorem' ],
+                         "Update"          :["from",      'nama'  ,"edit-3"   ,'' ],
+                         "Sheet"           :["from",      'nama'  ,"plus"   ,'tabel' ],
+                         "Upload"          :["upload",    'nama'  ,"image"    ,'' ],
+                         "Upload File"     :["uploadFile",'nama'  ,"file"     ,'' ],
+                         "Recycle"         :["recycle",   'nama'  ,"trash"    ,'' ],
+                         "Delete"          :["delete",    'nama'  ,"trash"    ,'eyJkaXIiOiJkZW1vXC9BcGlcLzAuMVwvaW5zZXJ0LnBocCIsInVpZCI6MX0' ],
+                         "Archive"         :["devices",   'nama'  ,"archive"  ,'archive' ],
+                         "Bookmark"        :["bookmark",  'nama'  ,"bookmark" ,'archive' ],
+                         "Spam"            :["devices",   'nama'  ,"slash"    ,'spam' ],
+                         "Label"           :["indikator", 'nama'  ,"folder"   ,'' ],
+                       } 
+                    });
+                     return lengthMenu;                                
+                   }
+               },
+           ],
+           "language": {
+                 "searchPlaceholder": 'Search...',
+                 "sSearch": '',
+                 "lengthMenu": '_MENU_ ',
+            },
+    });
+    $('.dataTables_length select').select2({minimumResultsForSearch: Infinity });  
+    // GET From Action
+            var columnRoleoption ={
+            '#Limit2'      :['change','0'],
+            '#Inputnama1'  :['keyup','1'],
+            };  
+            $.each(columnRoleoption,function(index,row){
+                  $(document).on(row[0], index, function(){
+                    //console.log(this.value);
+                      myTable
+                       .columns(row[1])
+                       .search(this.value)
+                       .draw();
+                   });
+              });
+
+     window.reload=function (key) {
+        $(".table").DataTable().ajax.reload( null, false);
+     }
+</script>
+ <button onclick="useOnclick(['from','add']);" class="btn btn-success">Modal  Datatables</button>
+<rootTabel id="rootTabel"></rootTabel>
+
+<app-tatiye
+   useHandel="Grid"
+   modal="Insert Data,400px,fromAction"
+   tabel="BC4dOfCdK2+ITQa1spUwag"
+   route="datatables"
+   segment="demoModal01"
+   az="a"
+   privacy="userid"
+   content="datatables"
+   id="app">
+ </app-tatiye>
+
+  <app-element
+     h1="nama"
+     p="title"
+     id="data">
+     <h1></h1>
+     <p></p>
+  </app-element>

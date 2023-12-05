@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 pt-10px">
+
+          <grid-tatiye 
+            id="report"
+            element="card"
+            sortable="false"
+            selector="#gridSystem div"
+            class="container-fluid">
+             <div class="row row-xs"id="gridSystem">
+              <div titel="Report" textClass="tx-whiteX bg-secondaryX" element="modal" class="col-md-12" 
+                   stack="datatables"from='{
+                        "token"       :"eyJkaXIiOiJkZXZpY2VzXC9BcGlcLzAuMVwvcmVwb3J0LnBocCIsInVpZCI6MX0",
+                        "filename"    :"Report",
+                        "content"     :false, 
+                        "tableHead"   :["No","","User","Update","Insert","Total","Progress","Tanggal","Waktu",""],
+                        "fromAction"  :false,
+                        "columnHide"  :false,
+                        "tabelFooter" :false,
+                        "myfrom"      :false,
+                        "sheetData"   :false,
+                        "columnDefs" :[
+                           {"td": 0,"className": ""},
+                           {"td": 1,"className": "","width": "5%"},
+                           {"td": 2,"className": ""},
+                           {"td": 3,"className": ""},
+                           {"td": 4,"className": ""},
+                           {"td": 5,"className": ""},
+                           {"td": 6,"className": ""},
+                           {"td": 7,"className": ""},
+                           {"td": 8,"className": ""}
+                        ]
+                     }'>
+                   <datatables>
+                     <template id="fromIndex">
+                          <table></table>
+                     </template>
+                   </datatables>
+                 </div> 
+             </div>
+          </grid-tatiye>

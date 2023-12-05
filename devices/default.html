@@ -1,0 +1,84 @@
+      <div   class="filemgr-content-header pl-10px">
+           <span class="pl-20px"><i class="feat feat-search mr-10px feat-scale-18"></i></span>
+          <div class="search-form pl-10px" style="width:70%">
+            <input  id="search" type="text"  class="form-control" placeholder="Cari file dan folder">
+          </div>
+           <nav class="nav d-none d-sm-flex mg-l-auto mr-10px">
+            <a href="javascript:void(0);" class="nav-link"><i class ="feat feat-list feat-scale-18"></i></a>
+            <a href="javascript:void(0);" class="nav-link"><i class ="feat feat-alert-circle feat-scale-18"></i></a>
+            <a href="javascript:void(0);" class="nav-link"><i class ="feat feat-settings feat-scale-18"></i></a>
+          </nav>
+        </div><!-- filemgr-content-header -->
+<div class="filemgr-content-body1 pt-50px">
+          <div class="pd-20 pd-lg-25 pd-xl-30">
+            <h4 class="mg-b-15 mg-lg-b-5">My Devices</h4>
+            <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15">File yang Baru Diakses {tahun}</label>
+  <app-tatiye 
+       token="eyJkaXIiOiJkZXZpY2VzXC9BcGlcLzAuMVwvZmlsZS5waHAiLCJ1aWQiOjF9"
+       indexOn=".row"
+       console="false"
+       pagination="app"
+       stack="group"
+       keywords="search"
+       dropdown='{ 
+             "Detail"          :["devices",  "nama"    ,"info"     ],
+             "Download"        :["download", "nama"    ,"download" ],
+             "Rename File"     :["from",     "nama"    ,"edit-3"   ],
+             "Delete"          :["delete",   "nama"    ,"trash"  ]
+        }'
+        from='{
+               "title"    :"Insert Data",
+               "segment"  :"file",
+               "content"  :"ngorey", 
+               "storage"  :[true, "b","400px","userid"],
+               "action"   :{
+                             "nama"       :["text",    "12" ,"Judul"]
+                           }
+
+         }'
+       id="app">
+        <div class="row row-xs" key="8"keywords="off" page="1"id="tempalte">
+              <div class="col-6 col-sm-4 col-md-3  mb-10px">
+                <div class="card card-file">
+                  <div class="dropdown-file">
+                       <dropdown class="pull-right" name="id"></dropdown>
+                  </div><!-- dropdown -->
+                  <div class="card-file-thumb tx-danger">
+                    <i name="icon"class="far fa-file-pdf"></i>
+                  </div>
+                  <div class="card-body">
+                    <h6 name="nmFile"></h6>
+                    <span name="nama">Desakripsi </span><br>
+                    <span class="d-none d-sm-inline"name="date" ></span>, <span name="time"></span></div>
+                </div>
+              </div><!-- col -->
+            </div><!-- row -->
+    </app-tatiye>
+    <stack-group class="row row-xs"></stack-group>
+    <pagination-app class="pagination-sm"></pagination-app>
+
+       <hr class="mg-y-40 bd-0">
+       <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15">Devices Folders {tahun}</label>
+       <element-tatiye 
+         token="eyJkaXIiOiJkZXZpY2VzXC9BcGlcLzAuMVwvZm9sZGVyLnBocCIsInVpZCI6MX0"
+         console="false"
+         element="layout"
+         container="group"/>
+        <app-container indexOn="content"id="group">
+          <content key="12"keywords="off" page="1" class=" row row-xs">
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="media media-folder">
+                  <i class="tx-orange icon-feather-folder fs-34px "></i>
+                  <div class="media-body">
+                    <h6 class="link-02" name="folder"></h6>
+                    <span name="data"></span>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- col -->
+          </content>
+        </app-container>
+
+
+       
+        </div><!-- filemgr-content-body -->
+ 

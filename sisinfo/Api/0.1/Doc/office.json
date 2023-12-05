@@ -1,0 +1,31 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJzaXNpbmZvXC9BcGlcLzAuMVwvb2ZmaWNlLnBocCIsInVpZCI6MX0",
+        "package": "sisinfo\/Api\/0.1",
+        "controllers": "sisinfo",
+        "tabel": "sisinfo",
+        "version": "0.1",
+        "segments": "select",
+        "filename": "office",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "sisinfo",
+            "select": "nama,deskripsi,date,time,id",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "select",
+            "package": "sisinfo\/0.1",
+            "filename": "office",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

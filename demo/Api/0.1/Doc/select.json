@@ -1,0 +1,31 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJkZW1vXC9BcGlcLzAuMVwvc2VsZWN0LnBocCIsInVpZCI6MX0",
+        "package": "demo\/Api\/0.1",
+        "controllers": "demo",
+        "tabel": "demo",
+        "version": "0.1",
+        "segments": "select",
+        "filename": "select",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "demo",
+            "select": "nama,title,Provinsi,Kabupaten,Kecamatan,deskripsi,Desa,kode,id",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "select",
+            "package": "demo\/0.1",
+            "filename": "select",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

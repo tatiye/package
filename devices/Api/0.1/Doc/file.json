@@ -1,0 +1,31 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJkZXZpY2VzXC9BcGlcLzAuMVwvZmlsZS5waHAiLCJ1aWQiOjF9",
+        "package": "devices\/Api\/0.1",
+        "controllers": "devices",
+        "tabel": "appfile",
+        "version": "0.1",
+        "segments": "appfile",
+        "filename": "file",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "appfile",
+            "select": "keyid,categori,nmtabel,fileType,filename",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "appfile",
+            "package": "devices\/0.1",
+            "filename": "file",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

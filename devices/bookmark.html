@@ -1,0 +1,67 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 pt-10px">
+
+          <grid-tatiye 
+            id="bookmark"
+            element="card"
+            sortable="false"
+            selector="#gridSystem div"
+            class="container-fluid">
+             <div class="row row-xs"id="gridSystem">
+              <div titel="Bookmark" textClass="tx-whiteX bg-secondaryX" element="modal" class="col-md-12" 
+                   stack="datatables"from='{
+                        "token"       :"eyJkaXIiOiJkZXZpY2VzXC9BcGlcLzAuMVwvYm9va21hcmsucGhwIiwidWlkIjoxfQ",
+                        "filename"    :"Archive",
+                        "content"     :"from", 
+                        "tableHead"   :["No","","Deskripsi","Tanggal","Waktu","#"],
+                        "fromAction"  :{
+                                  "title"       :"Bookmark",
+                                  "content"     :"from", 
+                                  "segment"     :"book",
+                                  "storage"     :[true, "boo","500px","userid"],
+                                  "action"      :{
+                                                "nama"            :["text",  "12" ,"Deskripsi"],
+                                                "deskripsi"       :["link",  "8" ,"URL Link"],
+                                                "categori"        :["hidden","12" ,"bookmark"],
+                                                "bookmark"        :["select","4","Categori","custom",["Link","youtube","facebook","github"]]
+    
+                                            }
+                          },
+                        "dropdown"  :{
+                                "Update"    :["from" ,"8" ,"nama" ,"bookmark"],
+                                "Delete"    :["delete","8" ,"nama" ,"trash-2"]
+                        },
+                        "columnHide"  :false,
+                        "tabelFooter" :false,
+                        "myfrom"      :false,
+                        "sheetData"   :false,
+                        "selectData"   :{
+                            "action":{
+                                    "nama"   :["text", "6" ,"Data"],
+                                    "date"   :["date", "6","Tanggal","yy/mm/dd"]
+                              },
+                             "roleoption":{
+                                    "#Inputnama1"       :["keyup","3"],
+                                    "#datepickerdate2"  :["change","6"]
+                              }
+                        },
+                        "columnDefs" :[
+                           {"td": 0,"className": ""},
+                           {"td": 1,"className": "","width": "5%"},
+                           {"td": 2,"className": ""},
+                           {"td": 3,"className": ""},
+                           {"td": 4,"className": ""}
+
+                        ]
+                     }'>
+                   <datatables>
+                     <template id="fromIndex">
+                          <table></table>
+                     </template>
+                   </datatables>
+                 </div> 
+             </div>
+          </grid-tatiye>
+   

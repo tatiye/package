@@ -1,0 +1,45 @@
+<grid-tatiye 
+  id="tabelClik"
+  element="card"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="Datatables" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJkYXRhdGFibGVzXC9BcGlcLzAuMVwvZGF0YXRhYmxlcy5waHAiLCJ1aWQiOjF9",
+              "filename"    :"Document",
+              "tableHead"   :["No","A1","A2","A3","A4",""],
+              "content"     :"from", 
+              "fromAction"  :{
+                      "title"       :"Datatables Insert Data",
+                      "content"     :"from", 
+                      "segment"     :"demouseClick3",
+                      "storage"     :[true, "ab","400px","userid","nama"],
+                      "action"      :{
+                                       "nama"       :["text",    "6" ,"Judul"],
+                                       "title"      :["text",    "6" ,"Deskripsi"]
+                                     }
+              },
+              "useDevices"  :{
+                      "Update"            :["from"  ,"5" ,"nama" ,"edit-3"],
+                      "Dialog"            :["dialog" ,"5" ,"nama" ,"book","400px"],
+                      "Dialog Route"      :["dialog" ,"5" ,"nama" ,"book","600px","react/lorem"],
+                      "Route"             :["route" ,"5" ,"nama" ,"book","600px","react/lorem"],
+                      "Delete"            :["recycle","5" ,"nama" ,"trash-2"]
+              },
+              "tabelFooter" :false,
+              "selectData"  :false,
+              "sheetData"   :false
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>
+
+
+ 

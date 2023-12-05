@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="xlsxcontent"></div>
+        </div>
+      <div class="col-md-12">
+        <grid-tatiye 
+          id="saa"
+          element="card"
+          sortable="false"
+          selector="#gridSystem div"
+          class="container-fluid">
+           <div class="row row-xs"id="gridSystem">
+            <div titel="Datatables" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+                 stack="xlsx"from='{
+                      "token"       :"eyJkaXIiOiJzaXNpbmZvXC9BcGlcLzAuMVwvZmlsZS5waHAiLCJ1aWQiOjF9",
+                      "filename"    :"Document",
+                      "content"     :"fromx", 
+                      "tableHead"   :false,
+                      "fromAction"  :false,
+                      "tabelFooter" :false,
+                      "selectData"  :false,
+                      "sheetData"   :false
+                   }'>
+                  <xlsx>
+                   <template id="fromIndex">
+                        <table></table>
+                   </template>
+                 </xlsx>
+               </div> 
+           </div>
+        </grid-tatiye>
+      </div>
+    </div>
+</div>

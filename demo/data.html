@@ -1,0 +1,126 @@
+<script type="module">
+	import tatiyeNet,{
+  Qrcode,Images,fileType,gridSystem
+} from "{ROOTPUBLIC}/modules/tatiyeNet.js";
+	Qrcode('gibran');
+	// Qrcode('gibran',{
+	// 	color:'#10b759',
+	// 	size:'128',
+	// });
+ let imgsize=Images('80x80/profil/1/WFJS-01.png');
+// console.log(fileType('pdf'))
+
+// let imgori=Images('profil/1/WFJS-01.png');
+// console.log(imgori)
+
+
+
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Initializes appGridSystem 
+            |--------------------------------------------------------------------------
+            | Develover Tatiye.Net 2022
+            | @Date  Sel 06 Jun 2023 10:07:11  WITA
+            */
+           gridSystem({
+                  "package"    :'demo',
+                  "autoload"   :'content', //active ,default
+                  "body"       :{
+                     "header"  :'#fff0',
+                     "boder"   :'rgba(72, 94, 144, 0.16)',  //rgba(72, 94, 144, 0.16)
+                     "body"    :'#fff0',
+                     "setting"  :'none', //none,hidden
+                  },
+                  "grid"       :{
+                     'classRow'   :'container-fluid',
+                     'scrollbar'  :'auto',
+                     'colom'     :[
+                           'col-md-6',
+                           'col-md-6',
+                     ],
+                     'header'     :[
+                           'one-edit-1',
+                           'one-edit-2', 
+                     ],
+                     'route'     :[
+                           'lorem',
+                           'lorem1',
+                     ],
+                  },
+            });
+            /* and class appGridSystem */
+    
+
+</script>
+<div id="content"></div>
+<canvas id="qrcode"></canvas>
+
+
+
+<div class="row">
+  <div class="col-md-4">
+                <h3>Modules ES6</h3>
+                <ul>
+                
+                  <li>Jsonview ?</li>
+                  <li>Firebase ?</li>
+                  <li>Tables ?</li>
+                  <li>Images </li>
+                  <li>fileType</li>
+                  <li>Qrcode</li>
+                  <li>Router</li>
+                  <li>setHttp</li>
+                  <li>setFrom</li>
+                  <li>setModal</li>
+                  <li>substr</li>
+                  <li>readmore</li>
+                  <li>explode</li>
+                  <li>expo</li>
+                  <li>replace</li>
+                  <li>setDecode</li>
+                  <li>setToken</li>
+                  <li>getToken</li>
+                  <li>setDateTime</li>
+                </ul>  
+
+
+  </div>
+  <div class="col-md-8">
+    <h3>CATATAN</h3>
+    <ul>
+   <li>Query intelligent</li>
+
+  <li><h4>Modal</h4>
+    <ul>
+    	
+      <li>1. modalRoute</li>
+      <li>(header titel,id,400px,content,demo/file)</li>
+      <li>2. modalRouteEntri</li>
+      <li>data-modalentri="header titel,content,demo/file"</li>
+
+    </ul>
+     <b>content</b>
+     <ol>
+<li>profile</li>
+<li>delete</li>
+<li>from</li>
+<li>upload</li>
+<li>content</li>      
+     </ol>
+  </li>
+
+  <li><h4>From</h4>
+     <ol>
+<li>from</li>
+<li>upload</li>
+<li>uploadFile</li>
+<li>userid</li>
+
+     </ol>
+  </li>
+  </ul>
+
+  </div>
+</div>

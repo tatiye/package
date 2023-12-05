@@ -1,0 +1,50 @@
+<chart-tatiye
+token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9wcHQucGhwIiwidWlkIjoxfQ"
+canvasID="flotChart"
+type="flotChar"
+import="dashforge/data.jsx"
+element=".row"
+id="app">
+<div class="card-footer pd-y-15 pd-x-20">
+  <div class="card1">
+    <div class="card-header d-sm-flex justify-content-between bd-b-0 pd-t-20 pd-b-0">
+      <div class="mg-b-10 mg-sm-b-0">
+        <h6 class="mg-b-5">Current Ticket Status</h6>
+        <p class="tx-12 tx-color-03 mg-b-0">as of 10th to 17th of March 2019</p>
+      </div>
+      <ul class="list-inline tx-uppercase tx-10 tx-medium tx-spacing-1 tx-color-03 mg-b-0">
+        <li class="list-inline-item">
+          <span class="d-inline-block wd-7 ht-7 bg-gray-400 rounded-circle mg-r-5"></span>
+          <span class="d-none d-md-inline"> {hari}</span>
+        </li>
+        <li class="list-inline-item mg-l-10">
+          <span class="d-inline-block wd-7 ht-7 bg-df-2 rounded-circle mg-r-5"></span>
+          <span class="d-none d-md-inline"> {bulan}</span>
+        </li>
+        <li class="list-inline-item mg-l-10">
+          <span class="d-inline-block wd-7 ht-7 bg-primary rounded-circle mg-r-5"></span>
+          Tahun<span class="d-none d-md-inline"> {tahun}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="chart-fifteen">
+        <div id="flotChart" class="flot-chart"></div>
+      </div>
+    </div>
+    <div class="row row-sm"id="template">
+      <div class="col-6 col-sm-4 col-md-3 col-lg">
+        <h4 class="tx-normal tx-rubik mg-b-10"name="data"></h4>
+        <div class="progress ht-2 mg-b-10">
+          <div name="bg_wp" addClass="progress-bar "  role="progressbar" ></div>
+        </div>
+        <h6 class="tx-uppercase tx-spacing-1 tx-semibold tx-10 tx-color-02 mg-b-2"name="label"></h6>
+        <p class="tx-10 tx-color-03 mg-b-0"><span class="tx-medium tx-success"name="progress1">
+        <i class="icon ion-md-arrow-down"></i></span> Progress</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</chart-tatiye>
+ 

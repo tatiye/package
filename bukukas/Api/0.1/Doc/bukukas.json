@@ -1,0 +1,31 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJidWt1a2FzXC9BcGlcLzAuMVwvYnVrdWthcy5waHAiLCJ1aWQiOjF9",
+        "package": "bukukas\/Api\/0.1",
+        "controllers": "bukukas",
+        "tabel": "bukukas",
+        "version": "0.1",
+        "segments": "datatables",
+        "filename": "bukukas",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "bukukas",
+            "select": "saldo,kas,aktifitas,keterangan,sumber,tanggal,total,id,userid",
+            "where": "row='1' ORDER BY tanggal",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "datatables",
+            "package": "bukukas\/0.1",
+            "filename": "bukukas",
+            "type": "application\/json"
+        }
+    }],
+    "data": null
+}

@@ -1,0 +1,68 @@
+      <div   class="filemgr-content-header pl-10px">
+           <span class="pl-20px"><i class="feat feat-search mr-10px feat-scale-18"></i></span>
+          <div class="search-form pl-10px" style="width:70%">
+            <input  id="search" type="text"  class="form-control" placeholder="Cari file dan folder">
+          </div>
+           <nav class="nav d-none d-sm-flex mg-l-auto mr-10px">
+            <a  onclick="useClick(['from','add']);"href="javascript:void(0);" class="nav-link"><i class ="feat feat-plus feat-scale-18"></i></a>
+            <a href="javascript:void(0);" class="nav-link"><i class ="feat feat-alert-circle feat-scale-18"></i></a>
+            <a href="javascript:void(0);" class="nav-link"><i class ="feat feat-settings feat-scale-18"></i></a>
+          </nav>
+        </div><!-- filemgr-content-header -->
+
+<div class="filemgr-content-body1 pt-50px">
+          <div class="pd-20 pd-lg-25 pd-xl-30">
+            <h4 class="mg-b-15 mg-lg-b-5">My Office </h4>
+            <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15">File yang Baru Diakses {tahun}</label>
+  <app-tatiye 
+       token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9zZWxlY3QucGhwIiwidWlkIjoxfQ"
+       indexOn=".dataOffice"
+       console="false"
+       pagination="app"
+       stack="group"
+       keywords="search"
+       useDevices='{ 
+             "Rename File"     :["from",   "nama" ,"edit-3"],
+             "Query Tabel"     :["query",  "nama" ,"database","400px","react/lorem"],
+             "Delete"          :["recycle","nama" ,"trash"  ]
+        }'
+        from='{
+               "title"    :"Buat File",
+               "segment"  :"file4",
+               "content"  :"ngorey", 
+               "storage"  :[true, "doc","400px","userid"],
+               "action"   :{
+                             "nama"       :["text",   "12" ,"Judul"],
+                             "fileType"   :["select", "6","Type","custom",["docx","pdf","xlsx","ppt"]],
+                             "date"       :["date",   "6" ,"Date","yy/mm/dd"]
+                           }
+        }'
+       id="app1">
+        <div class="dataOffice row row-xs" key="8" keywords="off" page="1"id="tempalte">
+              <div class="col-6 col-sm-4 col-md-3  mb-10px">
+                <div class="card card-file">
+                  <div class="dropdown-file">
+                       <usedevices class="pull-right" name="id"></usedevices>
+                  </div><!-- dropdown -->
+                  <div class="card-file-thumb tx-danger">
+                    <i name="icon"class="far fa-file-pdf"></i>
+                  </div>
+                  <div class="card-body">
+                   <a  onclick="useClick(['myOffice',this.id,'nama']);" href="javascript:void(0);"> <h6 class="bold" name="nama",></h6></a>
+                    <span name="fileType">Type file </span>
+                  </div>
+                  <div class="card-footer">
+                    <span class="d-none d-sm-inline" >Accessed: </span ><span name="time"></span></div>
+                </div>
+              </div><!-- col -->
+            </div><!-- row -->
+    </app-tatiye>
+    <stack-group class="row row-xs"></stack-group>
+    <pagination-app class="pagination-sm"></pagination-app>
+
+       <hr class="mg-y-40 bd-0">
+       <!-- <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15">Devices Folders {tahun}</label> -->
+   
+       
+        </div><!-- filemgr-content-body -->
+ 

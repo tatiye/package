@@ -1,0 +1,20 @@
+<script type="module">
+import tatiyeNet,{gridSystemContent} from "{ROOTMODULES}/es6.js";
+    gridSystemContent({
+          "package"    :'rbac',
+          "autoload"   :'content', //active ,default
+          "body"       :{
+             "content"  :'datatables', // datatables,vue,react
+             "insert"   :true,
+             "key"      :'Tambah User,400px,default,rbac/modal',
+          },
+          "grid"       :{
+             'classRow'   :'container-fluid',
+             'scrollbar'  :'auto',
+             'colom'      :'col-md-12',
+             'header'     :'Role Base Access Control',
+             'route'      :'from'
+          },
+    });
+</script>
+<div id="content"></div>

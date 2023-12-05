@@ -1,0 +1,36 @@
+aaaaaaaaa
+<script type="module">
+import tatiyeNet,{setFrom} from "{ROOTMODULES}/es6.js";
+const indexOn = {
+  render() {
+    setFrom({
+             storage      :{
+               'label'    :true,
+               'tabel'    :'appuserprofil',
+               'segment'  :'demoModal01',
+               'az'       :'a',
+               'key'      :tatiyeNet.userid,
+               'model'    :'{resheader}',
+               'route'    :'profil',
+               'content'  :'userid', //Outside,QuickSend 
+             },
+             action      :{
+                 // TYPE INPUT
+                 'filename'    :['images',  '12' ,'Images']
+               
+              },
+
+    });
+    const index = document.getElementById('row');
+    index.innerHTML = `
+        <div>
+          <div id="nugi"></div>
+          <div id="form-body"></div>
+        </div>
+      `;
+    return index;
+  }
+};
+indexOn.render();
+</script>
+<div id="row"></div>

@@ -1,0 +1,38 @@
+<grid-tatiye 
+  id="element1aa5"
+  element="default"
+  sortable="false"
+  selector="#gridSystem div"
+  class="container-fluid">
+   <div class="row row-xs"id="gridSystem">
+    <div titel="Datatables" textClass="tx-whiteX bg-secondaryX" class="col-md-12" 
+         stack="datatables"from='{
+              "token"       :"eyJkaXIiOiJiaWxpbmdcL0FwaVwvMC4xXC9saXN0T3JkZXIucGhwIiwidWlkIjoxfQ",
+              "filename"    :"Document",
+              "content"     :"from", 
+              "tableHead"   :["No","Order","Informasi","Jlh","Harga","Total",""],
+              "fromAction"  :{
+                      "title"       :"Datatables Insert Data",
+                      "content"     :"from", 
+                      "segment"     :"clickbil",
+                      "storage"     :[true, "ab","400px","userid"],
+                      "action"      :{
+                                       "nama"       :["text",    "6" ,"Judul"],
+                                       "title"      :["text",    "6" ,"Deskripsi"]
+                                     }
+              },
+              "useClick"  :{
+                      "trash-2"           :["recycle"  ,"6" ,"nama"]
+              },
+              "tabelFooter" :[4,5],
+              "selectData"  :false,
+              "sheetData"   :false
+           }'>
+         <datatables>
+           <template id="fromIndex">
+                <table></table>
+           </template>
+         </datatables>
+       </div> 
+   </div>
+</grid-tatiye>

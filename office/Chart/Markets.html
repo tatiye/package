@@ -1,0 +1,54 @@
+
+    <chart-tatiye 
+               token="eyJkaXIiOiJvZmZpY2VcL0FwaVwvMC4xXC9wcHQucGhwIiwidWlkIjoxfQ"
+               canvasID="flotChartE106"
+               type="Markets"
+               element=".setul"
+               color="#10b759"
+               id="app">
+
+            <div class="card1">
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">Portfolio</h6>
+                <nav class="nav nav-row-xs align-items-center">
+                  <a href="javascript:void(0);" class="nav-link active">{hari}</a>
+                  <a href="javascript:void(0);" class="nav-link">{bulan}</a>
+                  <a href="javascript:void(0);" class="nav-link">{tahun}</a>
+                </nav>
+              </div>
+              <div class="card-body pd-0 pos-relative">
+                <div class="pos-absolute t-20 l-20">
+                  <p class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-b-0">Database</p>
+                  <div class="d-flex align-items-baseline">
+                    <h2 class="tx-normal tx-rubik tx-spacing--2 mg-b-0"id="database"></h2>
+                    <span class="tx-rubik tx-success mg-l-5"><i class="icon ion-md-arrow-up"></i> (100%)</span>
+                  </div>
+                </div>
+                <div class="chart-fourteen">
+                  <div id="flotChartE106" class="flot-chart"></div>
+                </div><!-- chart-fourteen -->
+                <div  class="setul list-group list-group-flush mg-t-15" id="template">
+
+                  <div class="list-group-item d-flex align-items-center">
+                    <div name="bg_color" addclass="crypto-icon crypto-icon-sm"class=" bg-orange">
+                       <i icon="no" 
+                             boxIcon='{"icon":[
+                                "icon-feather-box",
+                                "icon-feather-check-square",
+                                "icon-feather-database"
+                            ]}' class="cf cf-eth"></i>
+                    </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0" name="label"></h6>
+                      <span class="d-block tx-color-03 tx-uppercase1 tx-11 tx-medium"name="description"></span>
+                    </div>
+                    <div class="mg-l-auto text-right">
+                      <p class="mg-b-0 tx-rubik" name="data"></p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik" name="progress"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+        </chart-tatiye>

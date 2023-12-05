@@ -1,0 +1,23 @@
+
+<script type="module">
+import tatiyeNet,{setFrom} from "{ROOTMODULES}/es6.js";
+    setFrom({
+             storage      :{
+               'label'    :true,
+               'tabel'    :'demo',
+               'segment'  :'demoModal01',
+               'az'       :'a',
+               'key'      :'{key}',
+               'model'    :'{resheader}',
+               'route'    :'demo',
+               'content'  :'from', //Outside,QuickSend 
+               'page'     :'{page}',
+                'setdata'  :'privacy|user_id', //public,privacy|key 
+             },
+             action      :{
+                 // TYPE INPUT
+                 'nama'       :['text',    '6' ,'Judul'],
+                 'title'      :['date',    '6' ,'Calender','yy/mm/dd'],
+              },
+    });
+</script>

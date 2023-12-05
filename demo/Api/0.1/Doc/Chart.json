@@ -1,0 +1,36 @@
+{
+    "statusCode": 200,
+    "success": false,
+    "messages": [
+    {
+        "token": "eyJkaXIiOiJkZW1vXC9BcGlcLzAuMVwvQ2hhcnQucGhwIiwidWlkIjoxfQ",
+        "package": "demo\/Api\/0.1",
+        "controllers": "demo",
+        "tabel": "Hublang",
+        "version": "0.1",
+        "segments": "select",
+        "filename": "Chart",
+        "Content-Type": "application\/json",
+        "Query":
+        {
+            "query": "singel",
+            "tabel": "Hublang",
+            "select": "NAMA,NSB,NS,ALAMAT,KECAMATAN,DESA,DUSUN,KDKECAMATAN,KDDESA,KLASF,STATUS,PELANGGAN,BULAN,TAHUN,noreg,nik,hp,jekel,pekerjaan,maps,tahunreg,bulanreg",
+            "where": "row='1'",
+            "jaoinTabel": "",
+            "jaoinSelet": "",
+            "onJoin": "",
+            "result": "",
+            "segment": "select",
+            "package": "demo\/0.1",
+            "filename": "Chart",
+            "type": "application\/json",
+            "chart":
+            {
+                "label": "application\/json",
+                "data": "application\/json"
+            }
+        }
+    }],
+    "data": null
+}
